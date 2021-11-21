@@ -1,3 +1,3 @@
 awk 명령은 사용자가 제공하는 명령어 세트를 사용하여 사용자가 제공한 확장 정규식과 파일 세트를 한 번에 한 행씩 비교합니다. 그런 다음, 확장 정규식과 일치하는 모든 행에서 조치를 실행합니다,
 awk 명령의 패턴 검색은 grep 명령의 패턴 검색보다 더 일반적이고, 이 경우 사용자는 입력 텍스트 행에 대해 여러 가지 조치를 실행할 수 있습니다. awk 명령 프로그래밍 언어에는 컴파일이 필요하지 않으며, 사용자는 변수, 숫자 함수, 문자열 함수, 논리적 연산자를 사용할 수 있습니다.
-awk 명령은 LANG, LC_ALL, LC_COLLATE, LC_CTYPE, LC_MESSAGES, LC_NUMERIC, NLSPATH, PATH 환경 변수의 영향을 받습니다.
+awk 명령은 LANG, LC_ALL, LC_COLLATE, LC_CTYPE, LC_MESSAGES, LC_NUMERIC, NLSPATH, PATH 환경 변수의 영향을 받습니다..
