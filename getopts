@@ -19,3 +19,68 @@ OPTARG는 발견된 옵션 문자로 설정되고
 getopts 명령은 0보다 큰 리턴 값으로 종료됩니다.
 OPTARG는 첫 번째 비옵션-인수의 색인으로 설정됩니다. 여기서, 첫 번째 - - 인수는 그 전에 다른 비옵션-인수가 나타나지 않는 경우 옵션-인수로 간주되고 비옵션-인수가 없는 경우에는 값 $#+1로 간주됩니다.
 Name은 ?(물음표) 문자로 설정됩니다.
+
+예시
+#!/bin/bash
+
+PROGRAM_NAME="$0.sh";
+
+echo "PROGRAM : "$PROGRAM_NAME
+
+
+
+print_usage() 
+
+{
+
+    echo "Usage : ${PROGRAM_NAME} [-g global ] [-c config]";
+
+}
+
+
+
+if [ $# -eq 0 ]; then
+
+    print_usage
+
+    exit 1
+
+fi
+
+
+
+while getopts ":g:c:" opt
+
+do
+
+    case $opt in
+
+        "g")
+
+            g=$OPTARG
+
+            ;;
+
+        "c")
+
+            c=$OPTARG
+
+            ;;
+
+        *)
+
+            print_usage
+
+            return
+
+            ;;
+
+        esac
+
+done
+
+shift $((OPTIND - 1))
+
+
+
+echo "global:$g, conf:$c"; 
